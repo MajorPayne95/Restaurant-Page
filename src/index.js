@@ -1,6 +1,8 @@
 import _ from 'lodash'
 import './styles.css'
 import ourStory from './story.js'
+import clearPage from './clearPage.js'
+
 
 // Main page module
 function mainPage() {  
@@ -23,15 +25,15 @@ function mainPage() {
 
   storyBtn.innerText = 'Our Story'
   storyBtn.setAttribute('id', 'home')
-  storyBtn.onclick = ourStory;
+  storyBtn.onclick = clearPage, ourStory;
 
   menuBtn.innerText = 'Menu'
   menuBtn.setAttribute('id', 'menu')
-  menuBtn.onclick = ourStory;
+  menuBtn.onclick = clearPage, ourStory;
 
   contactBtn.innerText = 'Contact'
   contactBtn.setAttribute('id', 'contacts')
-  contactBtn.onclick = ourStory;
+  contactBtn.onclick = clearPage, ourStory;
     
   nav.appendChild(storyBtn);
   nav.appendChild(menuBtn);
@@ -44,13 +46,7 @@ function mainPage() {
   return header; 
 }
 
-function clearPage() {
-  let body = document.getElementById('body')
-  body.querySelectorAll('div').forEach(n => n.remove());
-  body.querySelectorAll('footer').forEach(n => n.remove());
-}
-
 document.body.appendChild(mainPage());
 ourStory();
-  
+
   

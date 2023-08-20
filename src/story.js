@@ -1,5 +1,6 @@
-export default function ourStory() {
 
+export default function ourStory() {
+  
   let divEl = document.createElement("div")
     divEl.className = 'content'
     divEl.setAttribute('id', 'content')
