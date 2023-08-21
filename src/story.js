@@ -4,7 +4,7 @@ export default function ourStory() {
   let divEl = document.createElement("div")
     divEl.className = 'content'
     divEl.setAttribute('id', 'content')
-    document.body.appendChild(divEl)
+    document.getElementById('bodyDiv').appendChild(divEl)
 
     let imgEl = document.createElement('img')
     imgEl.src = "https://epicurerestaurant.co.za/wp-content/uploads/2019/06/Chef_Coco23_resized.jpg"
@@ -18,5 +18,6 @@ export default function ourStory() {
     
     let footerEl = document.createElement('footer')
     footerEl.innerText = 'Credits go here!'
+    footerEl.setAttribute('id', 'footer')
     document.body.appendChild(footerEl)
 }
